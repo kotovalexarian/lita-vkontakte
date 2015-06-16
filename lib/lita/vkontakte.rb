@@ -1,4 +1,4 @@
-require "lita/vkontakte/version"
+require 'lita/vkontakte/version'
 
 module Lita
   module Vkontakte
