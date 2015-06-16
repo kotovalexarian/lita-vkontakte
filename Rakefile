@@ -1,3 +1,5 @@
 require "bundler/gem_tasks"
 
-task default: []
+task default: [:lint]
+
+task lint: []
