@@ -34,6 +34,26 @@ module Lita
 
         @vk = VkontakteApi::Client.new(config.access_token)
       end
+
+      def run # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
+        loop do
+          session = @vk.messages.get_long_poll_server
+          url = 'http://' + session.delete(:server)
+          params = session.merge(act: 'a_check', wait: 25, mode: 2)
+          params.ts = @ts if @ts
+
+          response = nil
+
+          get_response = lambda do
+            response = VkontakteApi::API.connection.get(url, params).body
+          end
+
+          while get_response.call
+            break if response.failed?
+            params.ts = @ts = response.ts
+          end
+        end
+      end
     end
 
     Lita.register_adapter(:vkontakte, Vkontakte)
