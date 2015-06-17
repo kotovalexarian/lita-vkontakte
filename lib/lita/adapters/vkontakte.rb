@@ -53,11 +53,40 @@ module Lita
           while get_response.call
             break if response.failed?
             params.ts = @ts = response.ts
+
+            response.updates.each(&method(:update))
           end
         end
 
       ensure
         robot.trigger(:disconnected)
+      end
+
+      protected
+
+      HANDLERS = {
+        4 => :get_message,
+      }
+
+      def update(a)
+        code = a[0]
+        data = a[1..-1]
+
+        method(HANDLERS[code]).call(*data) if HANDLERS[code]
+      end
+
+      def get_message(_msg_id, _flags, # rubocop:disable Metrics/ParameterLists
+                      from_id, _timestamp, subject,
+                      text, _attachments
+                     )
+        is_private = subject.start_with?(' ')
+
+        user = User.new(from_id)
+        source = Source.new(user: user, room: subject)
+        message = Message.new(robot, text, source)
+
+        message.command! if is_private
+        robot.receive(message)
       end
     end
 
