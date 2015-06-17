@@ -81,15 +81,16 @@ module Lita
         method(HANDLERS[code]).call(*data) if HANDLERS[code]
       end
 
-      def get_message(_msg_id, _flags, # rubocop:disable Metrics/ParameterLists
-                      from_id, _timestamp, subject,
-                      text, _attachments
-                     )
+      def get_message(_msg_id, flags, # rubocop:disable Metrics/ParameterLists
+                      from_id, _timestamp, subject, text, _attachments)
         is_private = subject.start_with?(' ')
+        is_own = flags & 2 != 0
 
         user = User.new(from_id)
         source = Source.new(user: user, room: subject)
         message = Message.new(robot, text, source)
+
+        return if is_own
 
         message.command! if is_private
         robot.receive(message)
