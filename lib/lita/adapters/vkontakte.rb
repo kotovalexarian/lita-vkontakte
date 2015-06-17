@@ -1,6 +1,6 @@
 require 'lita'
-
 require 'vkontakte_api'
+require 'securerandom'
 
 ##
 # Lita module.
@@ -62,6 +62,12 @@ module Lita
         robot.trigger(:disconnected)
       end
 
+      def send_messages(target, messages)
+        messages.reject(&:empty?).each do |message|
+          send_message(target, message)
+        end
+      end
+
       protected
 
       HANDLERS = {
@@ -87,6 +93,17 @@ module Lita
 
         message.command! if is_private
         robot.receive(message)
+      end
+
+      def send_message(target, message) # rubocop:disable Metrics/AbcSize
+        is_private = target.room.start_with?(' ')
+
+        @vk.messages.send({
+          message: message,
+          guid: SecureRandom.random_number(2**31),
+          user_id: (target.user.id.to_i                     if is_private),
+          chat_id: (target.user.id.to_i - 2_000_000_000 unless is_private),
+        }.reject { |_, v| v.nil? })
       end
     end
 
