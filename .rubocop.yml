@@ -1,0 +1,6 @@
+AllCops:
+  Exclude:
+    - vendor/**/*
+
+Style/AndOr:
+  Enabled: false
