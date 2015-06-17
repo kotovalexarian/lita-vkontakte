@@ -4,3 +4,6 @@ AllCops:
 
 Style/AndOr:
   Enabled: false
+
+Style/TrailingComma:
+  Enabled: false
