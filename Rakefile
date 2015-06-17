@@ -26,6 +26,7 @@ task :changelog, [:token] do |_t, args|
   cmd << " -u #{github_user}"
   cmd << " -p #{github_project}"
   cmd << " -t #{args[:token]}" if args[:token]
+  cmd << ' --exclude-tags version'
 
   sh cmd
 end
