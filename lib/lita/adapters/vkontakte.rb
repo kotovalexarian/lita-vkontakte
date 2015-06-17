@@ -1,7 +1,16 @@
 require 'lita'
 
+##
+# Lita module.
+#
 module Lita
-  module Adapters # rubocop:disable Style/Documentation
+  ##
+  # Lita adapters module.
+  #
+  module Adapters
+    ##
+    # VKontakte adapter for the Lita chat bot.
+    #
     class Vkontakte < Adapter
     end
 
