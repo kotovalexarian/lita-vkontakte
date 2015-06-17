@@ -36,6 +36,8 @@ module Lita
       end
 
       def run # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
+        robot.trigger(:connected)
+
         loop do
           session = @vk.messages.get_long_poll_server
           url = 'http://' + session.delete(:server)
@@ -53,6 +55,9 @@ module Lita
             params.ts = @ts = response.ts
           end
         end
+
+      ensure
+        robot.trigger(:disconnected)
       end
     end
 
