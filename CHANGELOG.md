@@ -1,5 +1,21 @@
 # Change Log
 
+## [v1.0.0](https://github.com/braiden-vasco/lita-vkontakte/tree/v1.0.0) (2015-06-18)
+
+[Full Changelog](https://github.com/braiden-vasco/lita-vkontakte/compare/v0.1.0...v1.0.0)
+
+**Merged pull requests:**
+
+- Rename configuration fields [\#18](https://github.com/braiden-vasco/lita-vkontakte/pull/18) ([braiden-vasco](https://github.com/braiden-vasco))
+
+- Basic testing [\#17](https://github.com/braiden-vasco/lita-vkontakte/pull/17) ([braiden-vasco](https://github.com/braiden-vasco))
+
+- Add code documentation [\#16](https://github.com/braiden-vasco/lita-vkontakte/pull/16) ([braiden-vasco](https://github.com/braiden-vasco))
+
+- Add instructions [\#15](https://github.com/braiden-vasco/lita-vkontakte/pull/15) ([braiden-vasco](https://github.com/braiden-vasco))
+
+- Fix changelog generator [\#14](https://github.com/braiden-vasco/lita-vkontakte/pull/14) ([braiden-vasco](https://github.com/braiden-vasco))
+
 ## [v0.1.0](https://github.com/braiden-vasco/lita-vkontakte/tree/v0.1.0) (2015-06-17)
 
 **Merged pull requests:**
