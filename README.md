@@ -26,12 +26,12 @@ Go to https://vk.com/editapp?act=create and create standalone application.
 Then go to application settings page and look at application ID and secure key.
 
 Open the Ruby console (for example with `irb` command) and type the following
-(replace `LITA_VK_CLIENT_ID` with your application ID):
+(replace `LITA_VK_APP_ID` with your application ID):
 
 ```ruby
 require 'vkontakte_api'
 
-VkontakteApi.app_id = 'LITA_VK_CLIENT_ID'
+VkontakteApi.app_id = 'LITA_VK_APP_ID'
 VkontakteApi.redirect_uri = 'https://oauth.vk.com/blank.html'
 
 puts VkontakteApi.authorization_url(type: :client, scope: [:offline, :messages])
@@ -45,8 +45,8 @@ We need a parameter `access_token` from this URL.
 
 #### Required attributes
 
-- `client_id` (String) - An ID of your application
-- `client_secret` (String) - A secure key of your application
+- `app_id` (String) - An ID of your application
+- `app_secret` (String) - A secure key of your application
 - `access_token` (String) - An acces token from URL
 
 #### Example
@@ -60,8 +60,8 @@ Lita.configure do |config|
 
   config.robot.adapter = :vkontakte
 
-  config.adapters.vkontakte.client_id     = '2849670'
-  config.adapters.vkontakte.client_secret = 'EtgJI2yFJ0GYzgDLSS8e'
+  config.adapters.vkontakte.app_id     = '2849670'
+  config.adapters.vkontakte.app_secret = 'EtgJI2yFJ0GYzgDLSS8e'
   config.adapters.vkontakte.access_token  = '51jeIbjmmxJvKo7TTaW0Ext4cx6ajonDIbEkSjFofh7boyxH27JcjKXMODwZTaOxLA1bQbRyY0CEUM2TrXGK6'
 end
 ```
