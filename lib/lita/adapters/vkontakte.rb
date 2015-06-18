@@ -14,9 +14,9 @@ module Lita
     # VKontakte adapter for the Lita chat bot.
     #
     class Vkontakte < Adapter
-      config :client_id,     type: String, required: true
-      config :client_secret, type: String, required: true
-      config :access_token,  type: String, required: true
+      config :app_id,       type: String, required: true
+      config :app_secret,   type: String, required: true
+      config :access_token, type: String, required: true
 
       # Used version of VKontakte API.
       # {https://vk.com/dev/versions}
@@ -33,8 +33,8 @@ module Lita
         super
 
         VkontakteApi.configure do |vk|
-          vk.app_id       = config.client_id
-          vk.app_secret   = config.client_secret
+          vk.app_id       = config.app_id
+          vk.app_secret   = config.app_secret
           vk.redirect_uri = REDIRECT_URI
           vk.api_version  = API_VERSION
         end
