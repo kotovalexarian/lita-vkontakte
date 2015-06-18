@@ -20,4 +20,16 @@ describe Lita::Adapters::Vkontakte, lita: true do
   it 'registers Lita adapter "vkontakte"' do
     expect(Lita.adapters[:vkontakte]).to eq described_class
   end
+
+  describe '#initialize' do
+    it 'runs successful' do
+      expect { described_class.new(robot) }.to_not raise_error
+    end
+
+    it 'creates VKontakte API client' do
+      expect(
+        described_class.new(robot).instance_variable_get(:@vk)
+      ).to be_instance_of VkontakteApi::Client
+    end
+  end
 end
