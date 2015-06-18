@@ -17,7 +17,7 @@ At first, see the documentation for Lita: https://docs.lita.io/
 Add **lita-vkontakte** to your Lita instance's Gemfile:
 
 ```ruby
-gem 'lita-vkontakte', '~> 0.1.0'
+gem 'lita-vkontakte', '~> 1.0.0'
 ```
 
 ### Preparation
