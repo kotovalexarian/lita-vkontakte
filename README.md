@@ -17,7 +17,7 @@ At first, see the documentation for Lita: https://docs.lita.io/
 Add **lita-vkontakte** to your Lita instance's Gemfile:
 
 ```ruby
-gem "lita-vkontakte"
+gem 'lita-vkontakte', '~> 0.1.0'
 ```
 
 ### Preparation
@@ -31,7 +31,7 @@ Open the Ruby console (for example with `irb` command) and type the following
 ```ruby
 require 'vkontakte_api'
 
-VkontakteApi.app_id = "LITA_VK_CLIENT_ID"
+VkontakteApi.app_id = 'LITA_VK_CLIENT_ID'
 VkontakteApi.redirect_uri = 'https://oauth.vk.com/blank.html'
 
 puts VkontakteApi.authorization_url(type: :client, scope: [:offline, :messages])
