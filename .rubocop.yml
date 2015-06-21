@@ -7,3 +7,7 @@ Style/AndOr:
 
 Style/TrailingComma:
   Enabled: false
+
+Style/FileName:
+  Exclude:
+    - exe/lita-vkontakte
