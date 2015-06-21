@@ -7,3 +7,8 @@ Style/AndOr:
 
 Style/TrailingComma:
   Enabled: false
+
+Style/FileName:
+  Exclude:
+    - lib/lita-vkontakte.rb
+    - exe/lita-vkontakte
