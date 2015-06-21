@@ -10,4 +10,5 @@ Style/TrailingComma:
 
 Style/FileName:
   Exclude:
+    - lib/lita-vkontakte.rb
     - exe/lita-vkontakte
