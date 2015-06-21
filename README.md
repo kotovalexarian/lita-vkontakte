@@ -25,16 +25,11 @@ gem 'lita-vkontakte', '~> 1.0.0'
 Go to https://vk.com/editapp?act=create and create standalone application.
 Then go to application settings page and look at application ID and secure key.
 
-Open the Ruby console (for example with `irb` command) and type the following
-(replace `LITA_VK_APP_ID` with your application ID):
+Open terminal and type the following command
+(replace `$LITA_VK_APP_ID` with your application ID):
 
-```ruby
-require 'vkontakte_api'
-
-VkontakteApi.app_id = 'LITA_VK_APP_ID'
-VkontakteApi.redirect_uri = 'https://oauth.vk.com/blank.html'
-
-puts VkontakteApi.authorization_url(type: :client, scope: [:offline, :messages])
+```sh
+$ lita-vkontakte $LITA_VK_APP_ID
 ```
 
 You will see a link. Open it in browser where you are authorized in VKontakte
