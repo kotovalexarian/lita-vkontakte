@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'lita-vkontakte'
-  spec.version       = '1.0.0'
+  spec.version       = '1.1.0'
   spec.authors       = ['Braiden Vasco']
   spec.email         = ['braiden-vasco@mailtor.net']
 
@@ -24,7 +24,13 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'bundler', '~> 1.7'
   spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'github_changelog_generator', '~> 1.6'
+  spec.add_development_dependency 'yard', '~> 0.8'
+  spec.add_development_dependency 'redcarpet', '~> 3.3'
+  spec.add_development_dependency 'rubocop', '~> 0.31'
+  spec.add_development_dependency 'rspec', '~> 3.3'
+  spec.add_development_dependency 'simplecov', '~> 0.10'
 
-  spec.add_runtime_dependency 'lita', '>= 4.4'
-  spec.add_runtime_dependency 'vkontakte_api', '1.4.3'
+  spec.add_runtime_dependency 'lita', '~> 4.4'
+  spec.add_runtime_dependency 'vkontakte_api', '~> 1.4'
 end

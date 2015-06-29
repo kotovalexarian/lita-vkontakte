@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+require 'vkontakte_api'
+
+if ARGV.empty?
+  puts %(\
+usage: lita-vkontakte <app_id>
+  where <app_id> is ID of your application
+
+You can create application here:
+  https://vk.com/editapp?act=create
+Application should have type "Standalone"
+
+)
+else
+  VkontakteApi.app_id = ARGV[0]
+  VkontakteApi.redirect_uri = 'https://oauth.vk.com/blank.html'
+
+  url = VkontakteApi.authorization_url(type: :client,
+                                       scope: [:offline, :messages])
+
+  puts %(\
+Go to the following URL:
+  #{url}
+
+You will be redirected to address with argument "access_token" in query string.
+Copy it's value to your Lita instance's configuration file.
+
+)
+end

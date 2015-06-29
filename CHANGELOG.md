@@ -1,5 +1,21 @@
 # Change Log
 
+## [v1.1.0](https://github.com/braiden-vasco/lita-vkontakte/tree/v1.1.0) (2015-06-29)
+
+[Full Changelog](https://github.com/braiden-vasco/lita-vkontakte/compare/v1.0.0...v1.1.0)
+
+**Merged pull requests:**
+
+- Remove open-ended dependenies [\#24](https://github.com/braiden-vasco/lita-vkontakte/pull/24) ([braiden-vasco](https://github.com/braiden-vasco))
+
+- Move development dependencies to gemspec [\#23](https://github.com/braiden-vasco/lita-vkontakte/pull/23) ([braiden-vasco](https://github.com/braiden-vasco))
+
+- Remove unnecessary dependencies [\#22](https://github.com/braiden-vasco/lita-vkontakte/pull/22) ([braiden-vasco](https://github.com/braiden-vasco))
+
+- Test with multiple versions of Ruby [\#21](https://github.com/braiden-vasco/lita-vkontakte/pull/21) ([braiden-vasco](https://github.com/braiden-vasco))
+
+- Add console wizard [\#20](https://github.com/braiden-vasco/lita-vkontakte/pull/20) ([braiden-vasco](https://github.com/braiden-vasco))
+
 ## [v1.0.0](https://github.com/braiden-vasco/lita-vkontakte/tree/v1.0.0) (2015-06-18)
 
 [Full Changelog](https://github.com/braiden-vasco/lita-vkontakte/compare/v0.1.0...v1.0.0)
