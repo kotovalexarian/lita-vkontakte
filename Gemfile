@@ -8,8 +8,6 @@ gem 'github_changelog_generator', '~> 1.6.1'
 gem 'yard', '~> 0.8.7.6', require: false
 gem 'redcarpet', require: false
 
-gem 'pry', '~> 0.10.1', require: false
-
 gem 'rubocop', '~> 0.31.0', require: false
 
 gem 'rspec', '~> 3.3.0'
