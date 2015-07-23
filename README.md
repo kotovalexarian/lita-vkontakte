@@ -5,12 +5,12 @@ Lita::Adapters::Vkontakte
 [![Build Status](https://travis-ci.org/braiden-vasco/lita-vkontakte.svg)](https://travis-ci.org/braiden-vasco/lita-vkontakte)
 [![Coverage Status](https://coveralls.io/repos/braiden-vasco/lita-vkontakte/badge.svg)](https://coveralls.io/r/braiden-vasco/lita-vkontakte)
 
-[VKontakte](https://vk.com) adapter for the [Lita](https://lita.io) chat bot.
+[VKontakte](https://vk.com) adapter for the [Lita](http://lita.io) chat bot.
 
 Usage
 -----
 
-At first, see the documentation for Lita: https://docs.lita.io/
+At first, see the documentation for Lita: http://docs.lita.io/
 
 ### Installation
 
