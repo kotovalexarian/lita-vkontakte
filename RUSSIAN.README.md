@@ -1,7 +1,7 @@
 Lita::Adapters::Vkontakte
 =========================
 
-[Read in English](README.md)
+[:gb::ru:Read in English](README.md)
 
 [![Gem Version](https://badge.fury.io/rb/lita-vkontakte.svg)](http://badge.fury.io/rb/lita-vkontakte)
 [![Build Status](https://travis-ci.org/braiden-vasco/lita-vkontakte.svg)](https://travis-ci.org/braiden-vasco/lita-vkontakte)
